@@ -6,6 +6,7 @@ on:
         build:
             runs-on: ubuntu-latest
             steps:
+                - uses: actions/checkout@v4
                 - name: Use nodejs ${{matrix.node-version}}
                 - uses: actions/setup-node@v4
                   with:
