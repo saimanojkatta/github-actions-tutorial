@@ -13,5 +13,5 @@ on:
                         node-version: [21]
                    cache: "npm"
                 - run: npm ci
-                - run: npm test
                 - run: npm run build --if-present
+                - run: npm test
