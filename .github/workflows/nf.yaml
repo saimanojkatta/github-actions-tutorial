@@ -21,3 +21,10 @@ jobs:
       with:
           name: NF
           path: NF
+    #First mount the required drive to the remote server after setting up Github actions. Then push it
+    - name: Prepare network drive folder
+      run: |
+          mkdir -p /mnt/saimanoj-artifacts
+    - name: Copy artifact to network drive
+      run: |
+          cp NF /mnt/saimanoj-artifacts
